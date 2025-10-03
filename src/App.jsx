@@ -3,10 +3,11 @@ import CustomAppBar from './components/AppBar';
 
 const App = () => {
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ flex: 1, position: 'relative' }}>
-        <Desktop />
-      </div>
+    <div style={{ height: '100vh', position: 'relative' }}>
+      {/* Desktop fills full space */}
+      <Desktop />
+
+      {/* Fixed AppBar will ignore this layout and stick at bottom */}
       <CustomAppBar />
     </div>
   );
