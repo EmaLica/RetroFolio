@@ -7,15 +7,18 @@ const CustomAppBar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <AppBar style={{
-            position: 'unset',
-            bottom: 0,          // stick to bottom
-            left: 0,            // start from left edge
-            right: 0,           // go to right edge
-            height: '40px',     // or whatever height you like
+        // Fixed wrapper ensures AppBar stays at the viewport bottom even if the library sets top/bottom
+        <div style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            width: '100%',
+            height: '50px',
             zIndex: 9999,
         }}>
-            <Toolbar style={{ justifyContent: 'space-between' }}>
+            <AppBar style={{ position: 'relative', height: '100%' }}>
+                <Toolbar style={{ justifyContent: 'space-between' }}>
                 {/* START BUTTON + MENU */}
                 <div style={{ position: 'relative', display: 'inline-block' }}>
                     <Button
@@ -50,8 +53,9 @@ const CustomAppBar = () => {
 
                 {/* Right side (clock or search box) */}
                 <TextInput placeholder='Search...' width={150} />
-            </Toolbar>
-        </AppBar>
+                </Toolbar>
+            </AppBar>
+        </div>
     );
 };
 
