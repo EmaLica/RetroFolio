@@ -2,9 +2,9 @@ import React from 'react';
 
 // Replace these with your own images
 const icons = [
-    { name: 'My Computer', src: 'https://i.imgur.com/8Km9tLL.png', onClick: () => alert('Opening My Computer...') },
-    { name: 'Documents', src: 'https://i.imgur.com/J5LVHEL.png', onClick: () => alert('Opening Documents...') },
-    { name: 'My Showcase', src: 'src/assets/showcase.png', onClick: () => alert('Opening Browser...') },
+    { name: 'My Showcase', src: 'src/assets/showcase.png', onClick: () => alert('Opening Showcase...') },
+    { name: 'Wolfenstein', src: 'src/assets/wolfenstein.png', onClick: () => alert('Opening Wolfenstein...') },
+    { name: 'Doom', src: 'src/assets/doom.png', onClick: () => alert('Opening Doom...') }
 ];
 
 const Desktop = () => {
