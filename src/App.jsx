@@ -1,15 +1,15 @@
-import React from 'react';
-import { MenuList, MenuListItem, Separator } from 'react95';
+import Desktop from './components/Desktop';
+import CustomAppBar from './components/AppBar';
 
-const App = () => (
-  <div style={{ padding: '2rem' }}>
-    <MenuList>
-      <MenuListItem>🎤 Sing</MenuListItem>
-      <MenuListItem>💃🏻 Dance</MenuListItem>
-      <Separator />
-      <MenuListItem disabled>😴 Sleep</MenuListItem>
-    </MenuList>
-  </div>
-);
+const App = () => {
+  return (
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, position: 'relative' }}>
+        <Desktop />
+      </div>
+      <CustomAppBar />
+    </div>
+  );
+};
 
 export default App;

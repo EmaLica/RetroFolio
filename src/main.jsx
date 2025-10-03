@@ -27,7 +27,13 @@ const GlobalStyles = createGlobalStyle`
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
   }
+
+  /* Win95 background color */
+  body {
+    background: teal;
+  }
 `;
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
